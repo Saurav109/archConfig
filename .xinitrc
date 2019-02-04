@@ -1,0 +1,2 @@
+# start wm
+exec bspwm
