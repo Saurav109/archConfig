@@ -10,6 +10,10 @@ alias ls='ls --color=auto'
 
 HISTSIZE= 
 HISTFILESIZE=
+## Make Bash append rather than overwrite the history on disk:
+shopt -s histappend
+export PROMPT_COMMAND='history -a;history -r'
+
 
 export PS1="\033[1m\e[42m\T|\h\w\e[m\n\!---> "
 export PATH=$PATH:$HOME/.local/bin

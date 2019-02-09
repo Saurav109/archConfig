@@ -1,8 +1,12 @@
 #
 # wm independent hotkeys
 #
+F1
+	cat .emoji  | rofi -dmenu |  awk -e '{print $1}' | xclip
+F2
+	rofi -combi-modi window,drun -show combi -modi combi
 super + d
-	dmenu_run
+	i3-dmenu-desktop
 
 super + equal
 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 10%+

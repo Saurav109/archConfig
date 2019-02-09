@@ -71,6 +71,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/paste-into-folder" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/delete" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/empty-trash" "")
+; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1547018554761423-1" "")
 ; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1546996315237031-1" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open-in-new-window" "<Primary><Shift>o")
