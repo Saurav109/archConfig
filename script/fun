@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function help() # Show a list of functions
+{
+    grep "^function" $0 | fzf
+}	
+function doc(){
+	qutebrowser  -newWindow ~/Android/Sdk/doc/index.html &
+}
+
+function arg(){
+	echo "u typed $1"
+
+}
+function net(){
+	sudo systemctl start dhcpcd;
+}
+
+function p(){
+	ping google.com
+}
+
+if declare -f "$1" > /dev/null
+then
+  # call arguments verbatim
+  "$@"
+else
+  # Show a helpful error
+  echo "'$1' is not a known function name" >&2
+  exit 1
+fi
