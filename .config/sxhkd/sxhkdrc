@@ -2,9 +2,11 @@
 # wm independent hotkeys
 #
 F1
-	cat .emoji  | rofi -dmenu |  awk -e '{print $1}' | xclip
+	thunar
 F2
 	rofi -combi-modi window,drun -show combi -modi combi
+F3
+	qutebrowser
 super + d
 	i3-dmenu-desktop
 
@@ -16,7 +18,7 @@ super + minus
 
 
 super + @p
-	scrot '%Y-%m-%d_$wx$h.png' -s -q 100  -e 'mv $f ~/screenshots/'
+	scrot '%Y-%m-%d_$wx$h.png' -s -q 100  -e 'mv $f ~/screenshots/' ; notify-send "capture screenshot!"
 
 # rofi 
 super + x

@@ -15,12 +15,15 @@ shopt -s histappend
 export PROMPT_COMMAND='history -a;history -r'
 
 
-export PS1="\033[1m\e[42m\T|\h\w\e[m\n\!---> "
+#export PS1="\033[1m\e[42m\T|\h\w\e[m\n\!---> "
 export PATH=$PATH:$HOME/.local/bin
 
+export PS1="\[\033[1m\e[42m\$(pwd)(\!)  \e[m"
 
 alias v="vim "
-alias m="mkdir -v -p"
+alias locate="updatedb ; locate "
+alias m="man "
+alias mkdir="mkdir -v -p"
 alias rm="rm -r -v"
 alias s="sudo"
 alias pc="sudo pacman -S"
@@ -28,16 +31,17 @@ alias sv="sudo vim "
 alias g="git "
 alias c="clear "
 alias r="ranger "
-alias ls="ls -l "
+alias myS="vim ~/.local/bin/fun"
+alias ls="ls -l --color"
 
 alias cf="cd ~/.config"
 alias bs="vim ~/.config/bspwm/bspwmrc"
-alias sx="vim .config/sxhkd/sxhkdrc"
-alias po="vim .config/polybar/config"
-alias qu="vim .config/qutebrowser/config.py"
-alias rn="vim .config/ranger/rc.conf"
-alias nc="vim .config/ncmpcpp/config"
-alias bh="vim .bashrc"
+alias sx="vim ~/.config/sxhkd/sxhkdrc"
+alias po="vim ~/.config/polybar/config"
+alias qu="vim ~/.config/qutebrowser/config.py"
+alias rn="vim ~/.config/ranger/rc.conf"
+alias nc="vim ~/.config/ncmpcpp/config"
+alias bh="vim ~/.bashrc"
 
 
 alias do="cd ~/downloads"
@@ -49,3 +53,7 @@ alias ho="cd ~/"
 alias an="cd ~/AndroidStudioProjects"
 alias vi="cd ~/videos"
 
+
+xx(){
+	echo $1
+}
