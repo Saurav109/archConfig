@@ -16,7 +16,9 @@ export PROMPT_COMMAND='history -a;history -r'
 
 
 #export PS1="\033[1m\e[42m\T|\h\w\e[m\n\!---> "
-export PATH=$PATH:$HOME/.local/bin
+#export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/script
+
 
 export PS1="\[\033[1m\e[42m\$(pwd)(\!)  \e[m"
 
