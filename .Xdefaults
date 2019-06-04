@@ -1,18 +1,18 @@
 ~/.cache/wal/colors.sh
 #makes it slow
-URxvt.font: xft: Noto Sans Mono :regular:size=11
+#URxvt.blurRadius:	3x3
 
-#URxvt.font: xft: DEC Terminal:regular:size=19
-
+URxvt.font: xft: Hack:regular:size=10
 URxvt.scrollBar:	false
 URxvt.depth:	16
 URxvt.cursorBlink:	true
 URxvt.transparent:	true
-URxvt.shading:	45
+URxvt.shading:	50
 URxvt.intensityStyles:	true
 URxvt.cursorUnderline:	true
 URxvt.pointerBlank:	true
 URxvt.loginShell:	true
 URxvt.borderLess:	false
 URxvt.saveLines:	100000
-#URxvt.blurRadius:	5x5
+#URxvt.background:	#202328
+

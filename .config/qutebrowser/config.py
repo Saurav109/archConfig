@@ -16,6 +16,9 @@ config.bind('ar', 'open -t reddit.com')
 config.bind('ap', 'open -t pinterest.com')
 config.bind('ag', 'open -t github.com/saurav109')
 config.bind('au', 'open -t reddit.com/r/unixporn')
+config.bind('am', 'open -t https://medium.com/')
+config.bind('ad', 'open -t https://drive.google.com/drive/u/0/my-drive')
+config.bind('sd', 'spawn --userscript ytQutebrowser  {url}')
 
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.

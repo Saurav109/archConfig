@@ -23,7 +23,7 @@
 	<icon></icon>
 	<name>unzip file</name>
 	<unique-id>1549735845923418-1</unique-id>
-	<command>unzip %f</command>
+	<command>unzip %N</command>
 	<description></description>
 	<patterns>*</patterns>
 </action>

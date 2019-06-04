@@ -1,2 +1,4 @@
-# start wm
+# start window manager
 exec bspwm
+export _JAVA_AWT_WM_NONREPARENTING=1
+

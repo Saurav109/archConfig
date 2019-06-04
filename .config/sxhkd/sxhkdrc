@@ -1,24 +1,47 @@
-#
+
 # wm independent hotkeys
 #
+#MY SHORTCUTS
+#_____________________________________________________________________________________
+# focus the next/previous desktop in the current monitor
+button{8,9}
+	bspc desktop -f {prev,next}.local
+
+# ranger
+super + r
+	urxvt -e ranger
+
+# see resource useges
+#super + t
+#	urxvt -e htop
+
+# pick color from display
+super + c
+	colorpicker  --short --preview --one-shot | xclip -selection "clipboard"
+
+# launch application
 F1
 	thunar
 F2
-	rofi -combi-modi window,drun -show combi -modi combi
+	cat .emoji | rofi -dmenu -p "emoji" -show |  awk '{print  $1}' | xclip -selection "clipboard" 
 F3
 	qutebrowser
-super + d
-	i3-dmenu-desktop
 
+# dmenu
+super + d
+	~/script/screenshots
+#	dmenu_run -b -l 10
+
+# change vol 
 super + equal
 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 10%+
 
 super + minus
 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 10%-
 
-
+# take screenshot
 super + @p
-	scrot '%Y-%m-%d_$wx$h.png' -s -q 100  -e 'mv $f ~/screenshots/' ; notify-send "capture screenshot!"
+	scrot '%Y-%m-%d_$wx$h.png' -s -q 100  -e 'mkdir ~/screenShots; mv $f ~/screenShots/ ; notify-send "Screenshot" "successful !" -i ~/screenShots/$f'
 
 # rofi 
 super + x
@@ -28,16 +51,12 @@ super + x
 super + Return
 	urxvt
 
-# program launcher
-super + @space
-	dmenu_run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
 #
-# bspwm hotkeys
+# BSPWM HOTKEYS______________________________________________________________________________________
 #
 
 # quit bspwm normally
@@ -91,6 +110,7 @@ super + {_,shift + }c
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
+
 
 # focus the last node/desktop
 super + {grave,Tab}

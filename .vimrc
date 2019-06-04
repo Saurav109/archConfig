@@ -3,10 +3,13 @@ set number
 
 "highlight line
 set cursorline
-hi CursorLine term=bold cterm=bold 
+"hi CursorLine term=bold cterm=bold 
+
+"high light line
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 "spell checker
-"set spell!
+set spell!
 
 "undo
 set undofile
@@ -19,9 +22,11 @@ syntax on
 
 "search
 set hlsearch
+set ignorecase
+set smartcase
+"buffer thing , i dont know yet
+set autoread
 set encoding=utf-8
-
-
 
 " An example for a vimrc file.
 "
