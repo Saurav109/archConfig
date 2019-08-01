@@ -1,0 +1,32 @@
+#ignoring all file
+/*
+#except
+!script
+!docs
+!.Xdefaults
+!.bash_logout
+!.bash_profile
+!.bashrc
+!.compton.conf
+!.vimrc
+!.xinitrc
+!.zshrc
+!.gitignore
+
+#and also ignore this file
+!/.config/
+/.config/*
+!/.config/polybar
+!/.config/sxiv
+!/.config/bspwm
+!/.config/Thunar
+!/.config/dunst
+!/.config/fontconfig
+!/.config/mpd
+!/.config/mpv
+!/.config/ncmpcpp
+!/.config/qutebrowser
+!/.config/ranger
+!/.config/rofi
+!/.config/sxhkd
+!/.config/sxiv/
