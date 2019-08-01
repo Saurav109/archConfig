@@ -12,7 +12,7 @@ shopt -s histappend
 export PROMPT_COMMAND='history -a;history -r'
 
 export PATH=$PATH:$HOME/scripts
-export PS1="\[\e[42m\]$(pwd) \$(parse_git_branch)  \[\e[0m\]"
+export PS1="\[\e[42m\] \$(pwd) \$(parse_git_branch)\[\e[0m\]"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Show current git branch in prompt.
