@@ -1,0 +1,3 @@
+echo "# start wm
+startkde">$HOME/.xinitrc
+startx
