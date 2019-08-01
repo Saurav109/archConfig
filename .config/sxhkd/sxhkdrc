@@ -7,9 +7,6 @@
 button{8,9}
 	bspc desktop -f {prev,next}.local
 
-# ranger
-super + r
-	urxvt -e ranger
 
 # see resource useges
 #super + t

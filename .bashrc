@@ -12,21 +12,19 @@ shopt -s histappend
 export PROMPT_COMMAND='history -a;history -r'
 
 export PATH=$PATH:$HOME/script
-export PS1="\[\e[42m\]$(pwd)  \[\e[0m\]"
+export PS1="\[\e[42m\]$(pwd) \$(parse_git_branch)  \[\e[0m\]"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-alias v="vim "
+# Show current git branch in prompt.
+function parse_git_branch {
+git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 #alias locate="updatedb ; locate "
-alias m="man "
 alias mkdir="mkdir -v -p"
 alias rm="rm -r -v"
-alias s="sudo"
-alias pc="sudo pacman -S"
-alias sv="sudo vim "
-alias g="git "
 alias c="clear "
 alias r="ranger "
-alias myS="vim ~/.local/bin/fun"
 alias ls="ls -l --color"
 
 alias cf="cd ~/.config"
@@ -38,7 +36,6 @@ alias rn="vim ~/.config/ranger/rc.conf"
 alias nc="vim ~/.config/ncmpcpp/config"
 alias bh="vim ~/.bashrc"
 alias x="vim ~/.Xdefaults"
-alias ic="vim ~/.config/i3/config"
 
 
 alias do="cd ~/downloads"

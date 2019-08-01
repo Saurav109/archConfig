@@ -15,4 +15,3 @@ URxvt.loginShell:	true
 URxvt.borderLess:	false
 URxvt.saveLines:	100000
 #URxvt.background:	#202328
-

@@ -21,9 +21,9 @@
 </action>
 <action>
 	<icon></icon>
-	<name>unzip file</name>
-	<unique-id>1549735845923418-1</unique-id>
-	<command>unzip %N</command>
+	<name>send to mobile</name>
+	<unique-id>1563907702707209-1</unique-id>
+	<command>kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share %f</command>
 	<description></description>
 	<patterns>*</patterns>
 </action>
