@@ -11,3 +11,5 @@ sudo actkbd -s -d /dev/input/event7
 
 #get input name
 xev
+#get hardware name
+sudo dmidecode -t 2
