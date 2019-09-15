@@ -2,7 +2,7 @@
 #makes it slow
 #URxvt.blurRadius:	3x3
 
-URxvt.font: xft: Hack:regular:size=10
+URxvt.font: xft: Hack:regular:size=12
 URxvt.scrollBar:	false
 URxvt.depth:	16
 URxvt.cursorBlink:	true

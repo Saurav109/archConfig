@@ -15,17 +15,21 @@ export PATH=$PATH:$HOME/scripts
 export PS1="\[\e[42m\] \$(pwd) \$(parse_git_branch)\[\e[0m\]"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+#avoid duplicate entries in .bash_history
+export HISTCONTROL=ignoredups
+
 # Show current git branch in prompt.
 function parse_git_branch {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
 
 #alias locate="updatedb ; locate "
 alias mkdir="mkdir -v -p"
 alias rm="rm -r -v"
 alias c="clear "
 alias r="ranger "
-alias ls="ls -l --color"
+alias ls="ls -1 --color"
 
 alias cf="cd ~/.config"
 alias bs="vim ~/.config/bspwm/bspwmrc"

@@ -1,3 +1,7 @@
+vmap <C-c> <ESC>i
+
+
+
 "line number
 set number
 
@@ -88,3 +92,4 @@ endif " has("autocmd")
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+
