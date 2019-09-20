@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ironman/wallpapers/acacia_tree_old_144106_3840x2160.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0E100F",
+        "foreground": "#dde0df",
+        "cursor": "#dde0df"
+    },
+    "colors": {
+        "color0": "#0E100F",
+        "color1": "#8D724B",
+        "color2": "#A48F63",
+        "color3": "#CCAA70",
+        "color4": "#6F8E89",
+        "color5": "#A1A8A1",
+        "color6": "#C6C5B2",
+        "color7": "#dde0df",
+        "color8": "#9a9c9c",
+        "color9": "#8D724B",
+        "color10": "#A48F63",
+        "color11": "#CCAA70",
+        "color12": "#6F8E89",
+        "color13": "#A1A8A1",
+        "color14": "#C6C5B2",
+        "color15": "#dde0df"
+    }
+}

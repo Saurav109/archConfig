@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ironman/wallpapers/wallhaven-ox2pm5.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0D120E",
+        "foreground": "#c9ccbd",
+        "cursor": "#c9ccbd"
+    },
+    "colors": {
+        "color0": "#0D120E",
+        "color1": "#59654F",
+        "color2": "#6D8B33",
+        "color3": "#778767",
+        "color4": "#A6B855",
+        "color5": "#80866A",
+        "color6": "#8D9672",
+        "color7": "#c9ccbd",
+        "color8": "#8c8e84",
+        "color9": "#59654F",
+        "color10": "#6D8B33",
+        "color11": "#778767",
+        "color12": "#A6B855",
+        "color13": "#80866A",
+        "color14": "#8D9672",
+        "color15": "#c9ccbd"
+    }
+}

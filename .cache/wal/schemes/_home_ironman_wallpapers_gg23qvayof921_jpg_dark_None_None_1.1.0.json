@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ironman/wallpapers/gg23qvayof921.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0b1112",
+        "foreground": "#c0bfc3",
+        "cursor": "#c0bfc3"
+    },
+    "colors": {
+        "color0": "#0b1112",
+        "color1": "#5C613C",
+        "color2": "#323B40",
+        "color3": "#39474B",
+        "color4": "#575D56",
+        "color5": "#817D79",
+        "color6": "#797B84",
+        "color7": "#c0bfc3",
+        "color8": "#868588",
+        "color9": "#5C613C",
+        "color10": "#323B40",
+        "color11": "#39474B",
+        "color12": "#575D56",
+        "color13": "#817D79",
+        "color14": "#797B84",
+        "color15": "#c0bfc3"
+    }
+}

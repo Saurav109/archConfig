@@ -1,0 +1,21 @@
+set $wallpaper /home/ironman/wallpapers/wallhaven-771586.jpg
+
+set $background #101311
+set $foreground #e5dfce
+
+set $color0 #101311
+set $color1 #4E8D5E
+set $color2 #98A73F
+set $color3 #9B9863
+set $color4 #57708F
+set $color5 #59A888
+set $color6 #AFB695
+set $color7 #e5dfce
+set $color8 #a09c90
+set $color9 #4E8D5E
+set $color10 #98A73F
+set $color11 #9B9863
+set $color12 #57708F
+set $color13 #59A888
+set $color14 #AFB695
+set $color15 #e5dfce

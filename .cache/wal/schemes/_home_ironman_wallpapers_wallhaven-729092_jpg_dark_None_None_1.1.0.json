@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ironman/wallpapers/wallhaven-729092.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#181413",
+        "foreground": "#cab8bc",
+        "cursor": "#cab8bc"
+    },
+    "colors": {
+        "color0": "#181413",
+        "color1": "#E0121F",
+        "color2": "#CD3748",
+        "color3": "#975963",
+        "color4": "#E55565",
+        "color5": "#787387",
+        "color6": "#B67588",
+        "color7": "#cab8bc",
+        "color8": "#8d8083",
+        "color9": "#E0121F",
+        "color10": "#CD3748",
+        "color11": "#975963",
+        "color12": "#E55565",
+        "color13": "#787387",
+        "color14": "#B67588",
+        "color15": "#cab8bc"
+    }
+}

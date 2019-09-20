@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/ironman/wallpapers/wallhaven-j5v5wy.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0A0D14",
+        "foreground": "#f5e1c7",
+        "cursor": "#f5e1c7"
+    },
+    "colors": {
+        "color0": "#0A0D14",
+        "color1": "#5C4E65",
+        "color2": "#B15157",
+        "color3": "#F69567",
+        "color4": "#9E748B",
+        "color5": "#AE8EA6",
+        "color6": "#DFA4A2",
+        "color7": "#f5e1c7",
+        "color8": "#ab9d8b",
+        "color9": "#5C4E65",
+        "color10": "#B15157",
+        "color11": "#F69567",
+        "color12": "#9E748B",
+        "color13": "#AE8EA6",
+        "color14": "#DFA4A2",
+        "color15": "#f5e1c7"
+    }
+}

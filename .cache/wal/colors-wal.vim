@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/ironman/wallpapers/wallhaven-771586.jpg"
+let background = "#101311"
+let foreground = "#e5dfce"
+let cursor     = "#e5dfce"
+
+" Colors
+let color0  = "#101311"
+let color1  = "#4E8D5E"
+let color2  = "#98A73F"
+let color3  = "#9B9863"
+let color4  = "#57708F"
+let color5  = "#59A888"
+let color6  = "#AFB695"
+let color7  = "#e5dfce"
+let color8  = "#a09c90"
+let color9  = "#4E8D5E"
+let color10 = "#98A73F"
+let color11 = "#9B9863"
+let color12 = "#57708F"
+let color13 = "#59A888"
+let color14 = "#AFB695"
+let color15 = "#e5dfce"
