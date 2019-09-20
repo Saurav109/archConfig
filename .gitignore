@@ -30,3 +30,7 @@
 !/.config/rofi
 !/.config/sxhkd
 !/.config/sxiv/
+
+!/.cache/
+/.cache/*
+!/.cache/wal/
