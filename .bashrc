@@ -1,6 +1,6 @@
 
-# ~/.bashrc
-
+# To add support for TTYs this line can be optionally added.
+#source ~/.cache/wal/colors-tty.sh
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -12,7 +12,7 @@ shopt -s histappend
 export PROMPT_COMMAND='history -a;history -r'
 
 export PATH=$PATH:$HOME/scripts
-export PS1="\[\e[42m\] \$(pwd) \$(parse_git_branch)\[\e[0m\]"
+export PS1="\[\e[42;1;41m\]\$(pwd) \$(parse_git_branch)$ \[\e[0m\]\n"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 #avoid duplicate entries in .bash_history

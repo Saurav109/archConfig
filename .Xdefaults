@@ -1,4 +1,4 @@
-~/.cache/wal/colors.sh
+~/.cache/wal/colors.xresources
 #makes it slow
 #URxvt.blurRadius:	3x3
 
@@ -7,7 +7,7 @@ URxvt.scrollBar:	false
 URxvt.depth:	16
 URxvt.cursorBlink:	true
 URxvt.transparent:	true
-URxvt.shading:	50
+URxvt.shading:		30
 URxvt.intensityStyles:	true
 URxvt.cursorUnderline:	true
 URxvt.pointerBlank:	true

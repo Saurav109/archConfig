@@ -1,7 +1,6 @@
 {
-    "wallpaper": "/mnt/hdd/ironman/wallpapers/wallhaven-ym929g.png",
+    "wallpaper": "/home/ironman/wallhaven-ym929g.png",
     "alpha": "100",
-
     "special": {
         "background": "#0d0d0c",
         "foreground": "#e5e3df",

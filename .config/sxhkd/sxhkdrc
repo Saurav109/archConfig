@@ -16,13 +16,9 @@ button{8,9}
 super + c
 	colorpicker  --short --preview --one-shot | xclip -selection "clipboard"
 
-# launch application
-F1
-	thunar
-F2
-	cat .emoji | rofi -dmenu -p "emoji" -show |  awk '{print  $1}' | xclip -selection "clipboard" 
-F3
-	qutebrowser
+#loop youtube
+super + r
+	~/scripts/loopYoutube.sh
 
 # dmenu
 super + d
