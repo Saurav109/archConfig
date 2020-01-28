@@ -8,6 +8,9 @@ exec xsetroot -cursor_name left_ptr &
 #kde Connect
 /usr/lib/kdeconnectd &
 
+# track all my activies in this machine
+exec rescuetime
+
 #notification
 dunst &
 
@@ -64,4 +67,3 @@ xset r rate 500 40
 #two keyboard
 #xinput --disable 13
 #sudo actkbd -s -d /dev/input/event7 &
-

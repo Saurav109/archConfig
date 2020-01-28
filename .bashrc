@@ -12,7 +12,7 @@ shopt -s histappend
 export PROMPT_COMMAND='history -a;history -r'
 
 export PATH=$PATH:$HOME/scripts
-export PS1="\[\e[42;1;41m\]\$(pwd) \$(parse_git_branch)$ \[\e[0m\]\n"
+export PS1="\[\e[42;1;41m\]\$(pwd) \$(parse_git_branch)$ \[\e[0m\]"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 #avoid duplicate entries in .bash_history
