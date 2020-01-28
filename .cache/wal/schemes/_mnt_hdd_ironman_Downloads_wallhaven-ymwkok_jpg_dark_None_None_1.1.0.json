@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/mnt/hdd/ironman/Downloads/wallhaven-ymwkok.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#14151c",
+        "foreground": "#e6c8c4",
+        "cursor": "#e6c8c4"
+    },
+    "colors": {
+        "color0": "#14151c",
+        "color1": "#C37D7C",
+        "color2": "#767883",
+        "color3": "#927C83",
+        "color4": "#C67F81",
+        "color5": "#A78180",
+        "color6": "#AA898A",
+        "color7": "#e6c8c4",
+        "color8": "#a18c89",
+        "color9": "#C37D7C",
+        "color10": "#767883",
+        "color11": "#927C83",
+        "color12": "#C67F81",
+        "color13": "#A78180",
+        "color14": "#AA898A",
+        "color15": "#e6c8c4"
+    }
+}

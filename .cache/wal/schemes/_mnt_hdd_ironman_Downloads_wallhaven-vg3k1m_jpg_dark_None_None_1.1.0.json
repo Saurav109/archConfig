@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/mnt/hdd/ironman/Downloads/wallhaven-vg3k1m.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0d0e0f",
+        "foreground": "#cfcac7",
+        "cursor": "#cfcac7"
+    },
+    "colors": {
+        "color0": "#0d0e0f",
+        "color1": "#2B3848",
+        "color2": "#2F485C",
+        "color3": "#4E4D4E",
+        "color4": "#636364",
+        "color5": "#8F7F79",
+        "color6": "#577495",
+        "color7": "#cfcac7",
+        "color8": "#908d8b",
+        "color9": "#2B3848",
+        "color10": "#2F485C",
+        "color11": "#4E4D4E",
+        "color12": "#636364",
+        "color13": "#8F7F79",
+        "color14": "#577495",
+        "color15": "#cfcac7"
+    }
+}

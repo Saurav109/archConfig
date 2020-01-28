@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/mnt/hdd/ironman/Downloads/wallhaven-j5rrdy.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0E1012",
+        "foreground": "#c5c1c6",
+        "cursor": "#c5c1c6"
+    },
+    "colors": {
+        "color0": "#0E1012",
+        "color1": "#4F3C43",
+        "color2": "#384552",
+        "color3": "#5B565F",
+        "color4": "#99686A",
+        "color5": "#6F7687",
+        "color6": "#8C808D",
+        "color7": "#c5c1c6",
+        "color8": "#89878a",
+        "color9": "#4F3C43",
+        "color10": "#384552",
+        "color11": "#5B565F",
+        "color12": "#99686A",
+        "color13": "#6F7687",
+        "color14": "#8C808D",
+        "color15": "#c5c1c6"
+    }
+}

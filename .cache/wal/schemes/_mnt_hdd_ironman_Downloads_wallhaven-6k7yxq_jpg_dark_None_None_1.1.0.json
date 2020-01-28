@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/mnt/hdd/ironman/Downloads/wallhaven-6k7yxq.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#151930",
+        "foreground": "#c8d2db",
+        "cursor": "#c8d2db"
+    },
+    "colors": {
+        "color0": "#151930",
+        "color1": "#67B2CC",
+        "color2": "#6CB7D0",
+        "color3": "#A79CA6",
+        "color4": "#D0A79D",
+        "color5": "#CDB2B0",
+        "color6": "#E7C8B8",
+        "color7": "#c8d2db",
+        "color8": "#8c9399",
+        "color9": "#67B2CC",
+        "color10": "#6CB7D0",
+        "color11": "#A79CA6",
+        "color12": "#D0A79D",
+        "color13": "#CDB2B0",
+        "color14": "#E7C8B8",
+        "color15": "#c8d2db"
+    }
+}

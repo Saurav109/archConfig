@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/mnt/hdd/ironman/Downloads/wallhaven-lmrp3l.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0A0D10",
+        "foreground": "#ddcfc6",
+        "cursor": "#ddcfc6"
+    },
+    "colors": {
+        "color0": "#0A0D10",
+        "color1": "#3C5664",
+        "color2": "#4A4E55",
+        "color3": "#5E6167",
+        "color4": "#9A7165",
+        "color5": "#C08C73",
+        "color6": "#728794",
+        "color7": "#ddcfc6",
+        "color8": "#9a908a",
+        "color9": "#3C5664",
+        "color10": "#4A4E55",
+        "color11": "#5E6167",
+        "color12": "#9A7165",
+        "color13": "#C08C73",
+        "color14": "#728794",
+        "color15": "#ddcfc6"
+    }
+}
