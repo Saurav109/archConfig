@@ -1,5 +1,5 @@
 #get window name
-$xprop |awk '/WM_CLASS/{print $4}'
+xprop |awk '/WM_CLASS/{print $4}'
 
 #two keyboard
 #config file in /etc/actkbd.conf 
@@ -13,3 +13,6 @@ sudo actkbd -s -d /dev/input/event7
 xev
 #get hardware name
 sudo dmidecode -t 2
+
+#loop youtube video javaScript
+document.getElementsByClassName("video-stream html5-main-video")[0].loop=false

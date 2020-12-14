@@ -1,16 +1,18 @@
-vmap <C-c> <ESC>i
-
-
+"copy to clip board
+set clipboard=unnamed
+vmap <C-c> "+y
+vmap yy "+y
+vmap <C-p> :call system('xclip', @y)
 
 "line number
 set number
 
 "highlight line
 set cursorline
-"hi CursorLine term=bold cterm=bold 
+hi CursorLine term=bold cterm=bold 
 
 "high light line
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 "spell checker
 set spell!

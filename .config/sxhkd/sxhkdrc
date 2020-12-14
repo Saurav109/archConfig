@@ -4,17 +4,36 @@
 #MY SHORTCUTS
 #_____________________________________________________________________________________
 # focus the next/previous desktop in the current monitor
-button{8,9}
-	bspc desktop -f {prev,next}.local
+#button{9,8}
+#	bspc desktop -f {prev,next}.local
 
+button9
+	xdotool key Page_Up
+button8
+	xdotool key Page_Down
+
+# spotify
+# play pause
+super + F7
+	~/scripts/spotifyCommands.sh play
+# previous
+super + F6
+	~/scripts/spotifyCommands.sh previous
+# next
+super + F8
+	~/scripts/spotifyCommands.sh next
+
+# my menu
+super + o
+	~/scripts/cpy
 
 # see resource useges
-#super + t
+super + t
 #	urxvt -e htop
 
 # pick color from display
 super + c
-	colorpicker  --short --preview --one-shot | xclip -selection "clipboard"
+	~/scripts/colorPick.sh
 
 #loop youtube
 super + r
@@ -22,27 +41,27 @@ super + r
 
 # dmenu
 super + d
-	~/script/screenshots
-#	dmenu_run -b -l 10
+	dmenu_run -b -l 10
 
 # change vol 
 super + equal
-	pkill -SIGRTMIN+10 i3blocks; amixer set Master 10%+
+	pkill -SIGRTMIN+10 i3blocks; amixer set Master 5%+
 
 super + minus
-	pkill -SIGRTMIN+10 i3blocks; amixer set Master 10%-
+	pkill -SIGRTMIN+10 i3blocks; amixer set Master 5%-
 
 # take screenshot
 super + @p
-	scrot '%Y-%m-%d_$wx$h.png' -s -q 100  -e 'mkdir ~/screenShots; mv $f ~/screenShots/ ; notify-send "Screenshot" "successful !" -i ~/screenShots/$f'
+	~/scripts/takeScreenshot.sh
 
 # rofi 
 super + x
-	rofi -combi-modi window,drun,ssh -font "hack 10" -show combi
+	~/scripts/openRofi.sh
 
 # terminal emulator
 super + Return
-	urxvt
+	konsole
+#	urxvt
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -80,6 +99,7 @@ super + g
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+
 # set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
@@ -87,6 +107,10 @@ super + ctrl + {m,x,y,z}
 #
 # focus/swap
 #
+
+# VIM focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
 
 # focus the node in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
@@ -110,10 +134,10 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+#super + {o,i}
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}

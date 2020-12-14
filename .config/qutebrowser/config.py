@@ -8,6 +8,9 @@
 # config.load_autoconfig()
 
 #my shortcut
+# loop youtube
+config.bind('yl', 'jseval document.getElementsByClassName("video-stream html5-main-video")[0].loop=!document.getElementsByClassName("video-stream html5-main-video")[0].loop')
+# my tab
 config.bind('ay', 'open -t youtube.com')
 config.bind('af', 'open -t facebook.com')
 config.bind('ai', 'open -t instagram.com')
@@ -18,7 +21,12 @@ config.bind('ag', 'open -t github.com/saurav109')
 config.bind('au', 'open -t reddit.com/r/unixporn')
 config.bind('am', 'open -t https://medium.com/')
 config.bind('ad', 'open -t https://drive.google.com/drive/u/0/my-drive')
-config.bind('sd', 'spawn --userscript ytQutebrowser  {url}')
+config.bind('sv', 'spawn --userscript downloadVideo.sh  {url}')
+config.bind('sa', 'spawn --userscript downloadAudio.sh  {url}')
+config.bind('ab', 'spawn --userscript bookmarkToObsidianPersonal.py  {url}')
+
+
+
 
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
@@ -59,6 +67,7 @@ c.auto_save.session = True
 
 ## Background color of the completion widget category headers.
 ## Type: QssColor
+c.colors.completion.category.bg = '#000000'
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
 
 ## Bottom border color of the completion widget category headers.
@@ -167,7 +176,7 @@ c.auto_save.session = True
 
 ## Font color for hints.
 ## Type: QssColor
-# c.colors.hints.fg = 'black'
+# c.colors.hints.fg = 'blue'
 
 ## Font color for the matched part of hints.
 ## Type: QssColor
@@ -283,7 +292,7 @@ c.auto_save.session = True
 
 ## Foreground color of the statusbar.
 ## Type: QssColor
-# c.colors.statusbar.normal.fg = 'white'
+# c.colors.statusbar.normal.fg = 'red'
 
 ## Background color of the statusbar in passthrough mode.
 ## Type: QssColor
@@ -311,7 +320,7 @@ c.auto_save.session = True
 
 ## Default foreground color of the URL in the statusbar.
 ## Type: QssColor
-# c.colors.statusbar.url.fg = 'white'
+c.colors.statusbar.url.fg = 'white'
 
 ## Foreground color of the URL in the statusbar for hovered links.
 ## Type: QssColor
@@ -320,12 +329,12 @@ c.auto_save.session = True
 ## Foreground color of the URL in the statusbar on successful load
 ## (http).
 ## Type: QssColor
-# c.colors.statusbar.url.success.http.fg = 'white'
+c.colors.statusbar.url.success.http.fg = 'white'
 
 ## Foreground color of the URL in the statusbar on successful load
 ## (https).
 ## Type: QssColor
-# c.colors.statusbar.url.success.https.fg = 'lime'
+c.colors.statusbar.url.success.https.fg = 'grey'
 
 ## Foreground color of the URL in the statusbar when there's a warning.
 ## Type: QssColor
@@ -333,11 +342,11 @@ c.auto_save.session = True
 
 ## Background color of the tab bar.
 ## Type: QtColor
-# c.colors.tabs.bar.bg = '#555555'
+c.colors.tabs.bar.bg = 'black'
 
 ## Background color of unselected even tabs.
 ## Type: QtColor
-# c.colors.tabs.even.bg = 'darkgrey'
+c.colors.tabs.even.bg = 'grey'
 
 ## Foreground color of unselected even tabs.
 ## Type: QtColor
@@ -366,7 +375,7 @@ c.auto_save.session = True
 
 ## Background color of unselected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.odd.bg = 'grey'
+c.colors.tabs.odd.bg = 'grey'
 
 ## Foreground color of unselected odd tabs.
 ## Type: QtColor
@@ -374,7 +383,7 @@ c.auto_save.session = True
 
 ## Background color of selected even tabs.
 ## Type: QtColor
-# c.colors.tabs.selected.even.bg = 'black'
+c.colors.tabs.selected.even.bg = 'black'
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
@@ -382,7 +391,7 @@ c.auto_save.session = True
 
 ## Background color of selected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.selected.odd.bg = 'black'
+c.colors.tabs.selected.odd.bg = 'black'
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
@@ -430,7 +439,7 @@ c.auto_save.session = True
 ##   - always: Whenever a completion is available.
 ##   - auto: Whenever a completion is requested.
 ##   - never: Never.
-# c.completion.show = 'always'
+c.completion.show = 'always'
 
 ## Shrink the completion to be smaller than the configured size if there
 ## are no scrollbars.
@@ -486,7 +495,7 @@ c.auto_save.session = True
 ## to _n_ pages. For more information about the feature, please refer to:
 ## http://webkit.org/blog/427/webkit-page-cache-i-the-basics/
 ## Type: Int
-# c.content.cache.maximum_pages = 0
+c.content.cache.maximum_pages = 20
 
 ## Size (in bytes) of the HTTP network cache. Null to use the default
 ## value. With QtWebEngine, the maximum supported value is 2147483647 (~2
@@ -529,7 +538,7 @@ c.auto_save.session = True
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
-# c.content.dns_prefetch = True
+c.content.dns_prefetch = True
 
 ## Expand each subframe to its contents. This will flatten all the frames
 ## to become one scrollable page.
@@ -745,7 +754,7 @@ c.auto_save.session = True
 
 ## List of user stylesheet filenames to use.
 ## Type: List of File, or File
-#c.content.user_stylesheets = ["~/.cache/wal/colors.css"]
+c.content.user_stylesheets = ["~/.cache/wal/colors.css"]
 
 ## Enable WebGL.
 ## Type: Bool
@@ -775,7 +784,7 @@ c.auto_save.session = True
 ## Directory to save downloads to. If unset, a sensible OS-specific
 ## default is used.
 ## Type: Directory
-# c.downloads.location.directory = None
+# c.downloads.location.directory = 
 
 ## Prompt the user for the download location. If set to false,
 ## `downloads.location.directory` will be used.
@@ -810,7 +819,7 @@ c.auto_save.session = True
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
 ## Type: Int
-# c.downloads.remove_finished = -1
+c.downloads.remove_finished = 1
 
 ## Editor (and arguments) to use for the `open-editor` command. The
 ## following placeholders are defined: * `{file}`: Filename of the file
@@ -827,7 +836,7 @@ c.auto_save.session = True
 
 ## Font used in the completion categories.
 ## Type: Font
-# c.fonts.completion.category = 'bold 10pt monospace'
+c.fonts.completion.category = 'bold 10pt hack'
 
 ## Font used in the completion widget.
 ## Type: Font
@@ -872,11 +881,12 @@ c.auto_save.session = True
 
 ## Font used in the statusbar.
 ## Type: Font
-# c.fonts.statusbar = '10pt monospace'
+# c.fonts.statusbar = '7pt monospace'
 
 ## Font used in the tab bar.
 ## Type: QtFont
-# c.fonts.tabs = '10pt monospace'
+#c.fonts.tabs = '8pt hack'
+
 
 ## Font family for cursive fonts.
 ## Type: FontFamily
@@ -931,7 +941,7 @@ c.auto_save.session = True
 ## Duration (in milliseconds) to ignore normal-mode key bindings after a
 ## successful auto-follow.
 ## Type: Int
-# c.hints.auto_follow_timeout = 0
+c.hints.auto_follow_timeout = 0
 
 ## CSS border value for hints.
 ## Type: String
@@ -939,18 +949,18 @@ c.auto_save.session = True
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
-# c.hints.chars = 'asdfghjkl'
+c.hints.chars = 'abcdefghijklmnopqrstuvwxyz'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
-# c.hints.dictionary = '/usr/share/dict/words'
+#c.hints.dictionary = '/usr/share/dict/words'
 
 ## Which implementation to use to find elements to hint.
 ## Type: String
 ## Valid values:
 ##   - javascript: Better but slower
 ##   - python: Slightly worse but faster
-# c.hints.find_implementation = 'python'
+c.hints.find_implementation = 'javascript'
 
 ## Hide unmatched hints in rapid mode.
 ## Type: Bool
@@ -966,7 +976,7 @@ c.auto_save.session = True
 ##   - number: Use numeric hints. (In this mode you can also type letters from the hinted element to filter and reduce the number of elements that are hinted.)
 ##   - letter: Use the characters in the `hints.chars` setting.
 ##   - word: Use hints words based on the html elements and the extra words.
-# c.hints.mode = 'letter'
+c.hints.mode = 'letter'    
 
 ## Comma-separated list of regular expressions to use for 'next' links.
 ## Type: List of Regex
@@ -1015,7 +1025,7 @@ c.auto_save.session = True
 ## Automatically enter insert mode if an editable element is focused
 ## after loading the page.
 ## Type: Bool
-# c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = True
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
@@ -1258,7 +1268,7 @@ c.auto_save.session = True
 ##   - tabs: Current active tab, e.g. `2`.
 ##   - keypress: Display pressed keys when composing a vi command.
 ##   - progress: Progress bar for the current page loading.
-# c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
+c.statusbar.widgets = ['keypress', 'url', 'progress']
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
@@ -1270,7 +1280,7 @@ c.auto_save.session = True
 ##   - right: Close tabs on right-click.
 ##   - middle: Close tabs on middle-click.
 ##   - none: Don't close tabs using the mouse.
-# c.tabs.close_mouse_button = 'middle'
+c.tabs.close_mouse_button = 'right'
 
 ## How to behave when the close mouse button is pressed on the tab bar.
 ## Type: String
@@ -1296,11 +1306,11 @@ c.auto_save.session = True
 
 ## Padding (in pixels) for tab indicators.
 ## Type: Padding
-# c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
+# c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 1}
 
 ## Width (in pixels) of the progress indicator (0 to disable).
 ## Type: Int
-# c.tabs.indicator.width = 3
+# c.tabs.indicator.width = 10
 
 ## How to behave when the last tab is closed.
 ## Type: String
@@ -1310,7 +1320,7 @@ c.auto_save.session = True
 ##   - startpage: Load the start page.
 ##   - default-page: Load the default page.
 ##   - close: Close the window.
-# c.tabs.last_close = 'ignore'
+c.tabs.last_close = 'close'
 
 ## Maximum width (in pixels) of tabs (-1 for no maximum). This setting
 ## only applies when tabs are horizontal. This setting does not apply to
@@ -1318,14 +1328,14 @@ c.auto_save.session = True
 ## not apply properly if max_width is smaller than the minimum size of
 ## tab contents, or smaller than tabs.min_width.
 ## Type: Int
-# c.tabs.max_width = -1
+c.tabs.max_width = 200
 
 ## Minimum width (in pixels) of tabs (-1 for the default minimum size
 ## behavior). This setting only applies when tabs are horizontal. This
 ## setting does not apply to pinned tabs, unless `tabs.pinned.shrink` is
 ## False.
 ## Type: Int
-# c.tabs.min_width = -1
+# c.tabs.min_width = 50
 
 ## When switching tabs, what input mode is applied.
 ## Type: String
@@ -1346,7 +1356,7 @@ c.auto_save.session = True
 ##   - next: After the current tab.
 ##   - first: At the beginning.
 ##   - last: At the end.
-# c.tabs.new_position.related = 'next'
+c.tabs.new_position.related = 'last'
 
 ## Position of new tabs which aren't opened from another tab.
 ## Type: NewTabPosition
@@ -1372,7 +1382,7 @@ c.auto_save.session = True
 ##   - bottom
 ##   - left
 ##   - right
-# c.tabs.position = 'top'
+c.tabs.position = 'bottom'
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
@@ -1380,7 +1390,7 @@ c.auto_save.session = True
 ##   - prev: Select the tab which came before the closed one (left in horizontal, above in vertical).
 ##   - next: Select the tab which came after the closed one (right in horizontal, below in vertical).
 ##   - last-used: Select the previously selected tab.
-# c.tabs.select_on_remove = 'next'
+c.tabs.select_on_remove = 'prev'
 
 ## When to show the tab bar.
 ## Type: String
@@ -1389,7 +1399,7 @@ c.auto_save.session = True
 ##   - never: Always hide the tab bar.
 ##   - multiple: Hide the tab bar if only one tab is open.
 ##   - switching: Show the tab bar when switching tabs.
-# c.tabs.show = 'always'
+c.tabs.show = 'multiple'
 
 ## Duration (in milliseconds) to show the tab bar before hiding it when
 ## tabs.show is set to 'switching'.
@@ -1416,11 +1426,11 @@ c.auto_save.session = True
 ## tab ID of this tab. * `{scroll_pos}`: Page scroll position. *
 ## `{host}`: Host of the current web page. * `{backend}`: Either
 ## ''webkit'' or ''webengine'' * `{private}`: Indicates when private mode
-## is enabled. * `{current_url}`: URL of the current web page. *
+## is enabled. * `{current_url}` URL of the current web page. *
 ## `{protocol}`: Protocol (http/https/...) of the current web page. *
 ## `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-# c.tabs.title.format = '{audio}{index}: {title}'
+# c.tabs.title.format = '{audio}{index} {title}'
 
 ## Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.
@@ -1796,3 +1806,9 @@ c.url.start_pages = ['https://google.com']
 # config.bind('<Return>', 'prompt-accept', mode='yesno')
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
+
+# pywal colors
+# config.source("qutewal.py")
+
+
+

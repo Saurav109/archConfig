@@ -2,4 +2,4 @@
 #rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi 
 
 
-rofi.theme: /usr/share/rofi/themes/sidebar.rasi
+rofi.theme: /usr/share/rofi/themes/solarized_alternate.rasi

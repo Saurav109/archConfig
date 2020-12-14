@@ -1,2 +1,5 @@
 #!/bin/bash
-rofi -combi-modi window,drun,ssh -font "hack 10" -show combi
+
+rofi -combi-modi drun,run -theme ~/.cache/wal/colors-rofi-dark.rasi -font "Victor Mono bold 11" -p dskl -show combi
+
+

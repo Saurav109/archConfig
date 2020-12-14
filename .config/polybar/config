@@ -7,6 +7,7 @@
 ;
 ;=====================================================
 
+
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color15:#222}
@@ -40,7 +41,7 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-border-size = 1
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -53,10 +54,9 @@ font-0 = Hack:fixed:pixelsize=10:antialias=true;1
 font-1 = unifont:fontformat=truetype:size=10:antialias=true;1
 font-2 = NotoEmoji:scale=10;
 
-modules-left =  bspwm 
-;modules-left =  
+modules-left   = bspwm network 
 modules-center = time 
-modules-right =  alsa cpu memory temperature  filesystem 
+modules-right  = pulseaudio cpu memory mytmp  filesystem 
 
 
 tray-position = right
@@ -171,7 +171,7 @@ label-occupied-padding = 1
 ;label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
 
- ws-icon-[0-9]+ = label;icon
+ ;ws-icon-[0-9]+ = label;icon
 ; ; Note that the label needs to correspond with the bspwm workspace name
  ws-icon-0 = I;I
  ws-icon-1 = II;II
@@ -377,7 +377,6 @@ format-prefix = "🧠 "
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
 label = %percentage:2%%
-🐏 ram; U+1F40F
 
 
 [module/memory]
@@ -426,8 +425,10 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-
-
+[module/mytmp]
+type = custom/script
+exec = echo 🔥 $(sensors | awk '/Core/ {printf "%s|",$3}')
+intervel = 1
 
 [module/time]
 type = custom/script
@@ -439,6 +440,13 @@ interval = 40
 click-left = notify-send "📅 Calendar" " $(date) \n\n $(cal)"
 ;label-background =  ${colors.background}
 label-padding =10
+
+
+[module/myModule]
+type = custom/script
+exec = amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2 }'
+scroll-down = 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 5%-
+scroll-up   = 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 5%+
 
 
 [module/date]
@@ -453,13 +461,13 @@ time-alt = %H:%M:%abel = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
-;format-volume = <label-volume> <bar-volume>
-format-volume = <label-volume> 
-label-volume = vol %percentage%%
+max_percent = 100
+format-volume = <label-volume> <bar-volume>
+;format-volume = <ramp-volume> <label-volume> 
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+;label-muted = 🔇 muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -482,6 +490,18 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 t-volume = <ramp-volume> <label-volume>
 
+; Only applies if <ramp-volume> is used
+;ramp-volume-0 = ?
+;ramp-volume-1 = ?
+;ramp-volume-2 = ?
+
+label-muted = ? muted
+; label-muted-foreground = #66
+;
+; ; Only applies if <ramp-volume> is used
+ramp-volume-0 = ?
+ramp-volume-1 = ?
+ramp-volume-2 = ?
 ; Available tags:
 ; ;   <label-muted> (default)
 ; ;   <ramp-volume>
@@ -582,11 +602,6 @@ animation-discharging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
-
-🔥 fire; U+1F525
-
-
-
 format = 🔥 <label>
 ;format-underline = #f50a4d
 format-warn = <label-warn>
@@ -649,7 +664,7 @@ type = internal/network
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3.0
-
+interface = eth1
 ; Test connectivity every Nth update
 ; A value of 0 disables the feature
 ; NOTE: Experimental (needs more testing)

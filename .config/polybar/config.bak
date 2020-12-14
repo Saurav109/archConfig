@@ -1,3 +1,13 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color15:#222}
@@ -6,89 +16,51 @@ primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
+[modules/xmenu]
+menu-0 = item 1;command
+menu-0-0 = sub-item 1.1;command
+menu-0-1 = sub-item 1.2;command
+menu-0-2 = sub-item 1.3;command
+menu-1 = item 2;command
+menu-1-0 = sub-item 2.1;command
+menu-1-1 = sub-item 2.2;command
+
 [bar/example]
-;monitor = ${env:MONITOR:VGA-1}
+;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
-;offset-x = 1%
-;offset-y = 1%
 radius = 0.0
 fixed-center = true
 bottom = true
-
-margin-top = 0
-margin-bottom = 0
-
-padding-top = 0
-padding-bottom = 0
-
+separator = /
 background = ${colors.background}
 foreground = ${colors.foreground}
-
 line-size = 0
 line-color = #f00
-
-border-size = 0 
-border-color = none
-
+border-size = 1
+border-color = #00000000
 padding-left = 0
 padding-right = 2
-
-
 module-margin-left = 1
-module-margin-right = 0
+module-margin-right = 2
 
-font-0 = Hack:fixed:pixelsize=10:weight=normal:antialias=true;1
+modules-left   = bspwm xkeyboard 
+modules-center = time 
+modules-right  = pulseaudio cpu memory mytmp  filesystem 
+
+font-0 = Hack:fixed:pixelsize=10:antialias=true;1
 font-1 = unifont:fontformat=truetype:size=10:antialias=true;1
 font-2 = NotoEmoji:scale=10;
 
-modules-left =  bspwm 
-modules-center = time 
-modules-right =   cpu memory temperature alsa  filesystem 
-
 tray-position = right
-tray-padding = 0
-;tray-background = #0063ff
+tray-padding = 2
 
 wm-restack = bspwm
 ;wm-restack = i3
-;wm-stack = i3
 
-override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
+override-redirect = true
 
 
-[module/arrow1]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #C3E88D
-content-background = #292d3e
-
-
-
-[module/xwindow]
-type = internal/xwindow
-label = %TITLE:0:30:%
-
-
-
-[module/kdeconnect]
-type = custom/script
-exec = $HOME/.config/polybar/polybar-kdeconnect.sh 
-click-left = $HOME/.config/polybar/polybar-kdeconnect-menu.sh
-interval = 10
-
- 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
@@ -107,21 +79,10 @@ label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-
-; Mountpoints to display
 mount-0 = /
 mount-1 = /home
-
-; Seconds to sleep between updates
-; Default: 30
 interval = 60
-
-; Display fixed precision values
-; Default: false
 fixed-values = true
-
-; Spacing between entries
-; Default: 2
 spacing = 2
 ; Available tags:
 ;   <label-mounted> (default)
@@ -129,11 +90,9 @@ spacing = 2
 ;   <bar-used>
 ;   <ramp-capacity>
 format-mounted = <label-mounted>
-
 ; Available tags:
 ;   <label-unmounted> (default)
 format-unmounted = <label-unmounted>
-
 ; Available tokens:
 ;   %mountpoint%
 ;   %type%
@@ -145,29 +104,22 @@ format-unmounted = <label-unmounted>
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
 ;label-mounted = %mountpoint%: %percentage_free%% of %total%
-label-mounted = %mountpoint% %used%
-
+label-mounted = %mountpoint% %free%
 ; Available tokens:
 ;   %mountpoint%
 ; Default: %mountpoint% is not mounted
 label-unmounted = %mountpoint% not mounted
-;label-unmounted-foreground = #55
-
 
 
 [module/bspwm]
 type = internal/bspwm
-
-fuzzy-match = true
-
+fuzzy-match = false
 ;label-focused = %index%
 ;label-focused-background = ${colors.background}
 ;label-focused-underline= ${colors.primary}
 label-focused-padding = 1
-
 ;label-occupied = %index%
 label-occupied-padding = 1
-
 ;label-urgent = %index%!
 ;label-urgent-background = ${colors.alert}
 ;label-urgent-padding = 2
@@ -175,15 +127,21 @@ label-occupied-padding = 1
 ;label-empty = %index%
 ;label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
-
- ws-icon-[0-4]+ = label;icon
+ ;ws-icon-[0-9]+ = label;icon
 ; ; Note that the label needs to correspond with the bspwm workspace name
- ws-icon-0 = "I;♚"
- ws-icon-1 = "II;♛"
- ws-icon-2 = "III;♜"
- ws-icon-3 = "IV;♝"
- ws-icon-4 = "V;♞
- ws-icon-default = ♟
+ ws-icon-0 = I;I
+ ws-icon-1 = II;II
+ ws-icon-2 = III;III
+ ws-icon-3 = IV;IV
+ ws-icon-4 = V;V
+ ws-icon-5 = VI;VI
+ ws-icon-6 = VII;VII
+ ws-icon-7 = VIII;VIII
+ ws-icon-8 = IX;IX
+ ws-icon-9 = X;X
+
+
+ ws-icon-default =h 
 ;
 ; ; Available tags:
 ; ;   <label-monitor>
@@ -375,7 +333,6 @@ format-prefix = "🧠 "
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
 label = %percentage:2%%
-🐏 ram; U+1F40F
 
 
 [module/memory]
@@ -424,8 +381,10 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-
-
+[module/mytmp]
+type = custom/script
+exec = echo 🔥 $(sensors | awk '/Core/ {printf "%s|",$3}')
+intervel = 1
 
 [module/time]
 type = custom/script
@@ -437,6 +396,13 @@ interval = 40
 click-left = notify-send "📅 Calendar" " $(date) \n\n $(cal)"
 ;label-background =  ${colors.background}
 label-padding =10
+
+
+[module/myModule]
+type = custom/script
+exec = amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2 }'
+scroll-down = 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 5%-
+scroll-up   = 	pkill -SIGRTMIN+10 i3blocks; amixer set Master 5%+
 
 
 [module/date]
@@ -451,13 +417,13 @@ time-alt = %H:%M:%abel = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
-;format-volume = <label-volume> <bar-volume>
-format-volume = <label-volume> 
-label-volume = vol %percentage%%
+max_percent = 100
+format-volume = <label-volume> <bar-volume>
+;format-volume = <ramp-volume> <label-volume> 
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+;label-muted = 🔇 muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -480,6 +446,18 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 t-volume = <ramp-volume> <label-volume>
 
+; Only applies if <ramp-volume> is used
+;ramp-volume-0 = ?
+;ramp-volume-1 = ?
+;ramp-volume-2 = ?
+
+label-muted = ? muted
+; label-muted-foreground = #66
+;
+; ; Only applies if <ramp-volume> is used
+ramp-volume-0 = ?
+ramp-volume-1 = ?
+ramp-volume-2 = ?
 ; Available tags:
 ; ;   <label-muted> (default)
 ; ;   <ramp-volume>
@@ -580,11 +558,6 @@ animation-discharging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
-
-🔥 fire; U+1F525
-
-
-
 format = 🔥 <label>
 ;format-underline = #f50a4d
 format-warn = <label-warn>
@@ -647,7 +620,7 @@ type = internal/network
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3.0
-
+interface = eth1
 ; Test connectivity every Nth update
 ; A value of 0 disables the feature
 ; NOTE: Experimental (needs more testing)
@@ -726,3 +699,4 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
