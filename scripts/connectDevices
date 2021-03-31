@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# setup device
+adb tcpip 5555 || true;
+
+# start adding devices
+ip=192.168.0.10;
+echo "requesting to connect..."
+# looping all devices
+for ((i = 0 ; i <= 7 ; i++)); do
+	echo $ip$i ; adb connect $ip$i;  
+done

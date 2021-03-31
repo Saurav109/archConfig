@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xdotool search --class qutebrowser windowactivate --sync %1 key j windowactivate $(xdotool getactivewindow)

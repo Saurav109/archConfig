@@ -1,0 +1,2 @@
+export tmpVar=10
+echo done

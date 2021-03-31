@@ -32,12 +32,14 @@ bspc config presel_feedback_color "$color1"
 
 # desktop rules
 #bspc rule -a qutebrowser desktop='^1'
+bspc rule -a qutebrowser desktop=^1 follow=on
 bspc rule -a Chromium desktop='^1'
 bspc rule -a "java-lang-Thread"  desktop='^2' state=floating
 bspc rule -a jetbrains-studio desktop='^2'
 bspc rule -a jetbrains-webstorm desktop='^2'
 bspc rule -a  "jetbrains-pycharm-ce" desktop='^2'
 bspc rule -a Thunar state=floating rectangle=1000x600+500+300
+bspc rule -a vlc state=floating rectangle=1000x600+500+300
 bspc rule -a Genymotion state=floating
 bspc rule -a "Android Emulator" state=floating
 bspc rule -a "Genymotion Player" desktop='^3' state=floating

@@ -56,7 +56,8 @@ font-2 = NotoEmoji:scale=10;
 
 modules-left   = bspwm network 
 modules-center = time 
-modules-right  = pulseaudio cpu memory mytmp  filesystem 
+modules-right  = pulseaudio cpu memory filesystem 
+;modules-right  = pulseaudio cpu memory mytmp  filesystem 
 
 
 tray-position = right

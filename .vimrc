@@ -95,3 +95,6 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+
+set backupdir=/tmp,.
+set directory=/tmp,.

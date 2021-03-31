@@ -1,0 +1,26 @@
+#!/bin/bash
+
+configPath=~/scripts/.copyConfig/config
+
+rofiOutput=$( cat $configPath | rofi -dmenu )
+rofiArgs1=$( echo $rofiOutput | cut -d " " -f1 )
+
+if [ "$rofiArgs1" = "add" ]; then
+	newItem=$( echo $rofiOutput | cut -d " " -f2- )
+	echo $newItem >> $configPath
+elif [ "$rofiArgs1" = "show" ]; then
+	leafpad $configPath
+else
+	echo $rofiOutput | awk '{ $1=""; print substr($0,2) }' | tr -d "\n" | xclip -selection "clipboard"	
+fi
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+pcPath=/home/ironman/gdrive
+gPath="backup:gdrive"
+
+mobilePath=/home/ironman/mobile
+mobileGpath="backup:gMobile"
+#rclone sync  --update --verbose --transfers 30 --copy-links --checkers 8 --contimeout 60s --timeout 300s --retries 3 --low-level-retries 10  --stats 1s  $path $gPath
+
+# pc --> gdrive
+rclone sync --copy-links $pcPath $gPath
+
+# pc <-- gdrive
+rclone sync --copy-links $mobileGpath $mobilePath
